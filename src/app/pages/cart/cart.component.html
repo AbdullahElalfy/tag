@@ -1,0 +1,21 @@
+<section>
+  <div *ngIf="cartItems.length === 0" class="empty-cart">
+    <p>Your cart is empty 😕</p>
+  </div>
+  <div class="cart">
+    <div class="total-price"></div>
+  </div>
+
+  <div *ngFor="let item of cartItems" class="cart-item">
+    <img [src]="item.image" alt="{{ item.title }}" class="product-img" />
+    <div class="details">
+      <h3>{{ item.title }}</h3>
+      <p>Price: ${{ item.price }}</p>
+      <div class="quantity-controls">
+        <button (click)="decreaseQuantity(item)">-</button>
+        <span>{{ item.quantity }}</span>
+        <button (click)="increaseQuantity(item)">+</button>
+      </div>
+    </div>
+  </div>
+</section>

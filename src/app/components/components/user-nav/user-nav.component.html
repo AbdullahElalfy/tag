@@ -1,0 +1,42 @@
+<nav class="glass-navbar">
+  <div class="nav-container">
+    <div class="user-welcome">
+      <p>Welcome {{ username }} 👋</p>
+    </div>
+    <button class="logout-btn" (click)="logout()">
+      <i class="fa-solid fa-right-from-bracket"></i>
+    </button>
+
+    <div class="logo">
+      <img src="assets/imgs/black-logo.png" alt="" />
+    </div>
+    <div class="nav-links">
+      <a routerLink="home" routerLinkActive="active">
+        Home <i class="fa-regular fa-house"></i
+      ></a>
+      <a routerLink="products" routerLinkActive="active">
+        Products <i class="fa-solid fa-box-open"></i>
+      </a>
+      <a routerLink="cart" routerLinkActive="active">
+        Cart <i class="fa-solid fa-cart-shopping"></i>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<div class="mobile-nav">
+  <div class="nav-links">
+    <a routerLink="home" routerLinkActive="active">
+      <i class="fa-regular fa-house"></i
+    ></a>
+    <a routerLink="products" routerLinkActive="active">
+      <i class="fa-solid fa-box-open"></i>
+    </a>
+    <a routerLink="cart" routerLinkActive="active">
+      <i class="fa-solid fa-cart-shopping"></i>
+    </a>
+    <a class="logout-btn" (click)="logout()">
+      <i class="fa-solid fa-right-from-bracket"></i>
+    </a>
+  </div>
+</div>

@@ -1,0 +1,51 @@
+<div class="banner-container">
+  <img
+    [src]="
+      isMobile ? 'assets/imgs/banner-mobile.jpg' : 'assets/imgs/banner.jpg'
+    "
+    alt="Banner"
+  />
+
+  <div class="banner-overlay">
+    <!-- Da’ira kbeera -->
+    <svg viewBox="0 0 300 300" class="circle-text circle-1">
+      <defs>
+        <path
+          id="path1"
+          d="M150,150 m-120,0 a120,120 0 1,1 240,0 a120,120 0 1,1 -240,0"
+        />
+      </defs>
+      <text>
+        <textPath href="#path1" startOffset="0%">
+          SAME DAY DELIVERY IS NOW AVAILABLE! •
+        </textPath>
+      </text>
+    </svg>
+    <!-- Da’ira motawasset -->
+    <svg viewBox="0 0 260 260" class="circle-text circle-2">
+      <defs>
+        <path
+          id="path2"
+          d="M130,130 m-100,0 a100,100 0 1,1 200,0 a100,100 0 1,1 -200,0"
+        />
+      </defs>
+      <text>
+        <textPath href="#path2" startOffset="0%">
+          GET IT TODAY. ORDER FROM OUR WEBSITE •
+        </textPath>
+      </text>
+    </svg>
+    <!-- Da’ira soghayara -->
+    <svg viewBox="0 0 220 220" class="circle-text circle-3">
+      <defs>
+        <path
+          id="path3"
+          d="M110,110 m-80,0 a80,80 0 1,1 160,0 a80,80 0 1,1 -160,0"
+        />
+      </defs>
+      <text>
+        <textPath href="#path3" startOffset="0%">SHOP NOW, TAG.EG •</textPath>
+      </text>
+    </svg>
+  </div>
+</div>

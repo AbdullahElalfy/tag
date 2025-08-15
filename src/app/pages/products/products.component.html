@@ -1,0 +1,55 @@
+<div class="inp">
+  <input type="text" placeholder="Find your vibe..." [(ngModel)]="inpVal" />
+
+  <i class="fa-solid fa-magnifying-glass"></i>
+</div>
+<section>
+  <div
+    class="product"
+    *ngFor="let product of products | search : inpVal; let i = index"
+    [attr.data-aos]="'fade-up'"
+    [attr.data-aos-delay]="i * 40"
+    [id]="product.id"
+    [routerLink]="['/products', product.id]"
+  >
+    <div class="img" [attr.data-aos]="'zoom-in'" [attr.data-aos-delay]="i * 40">
+      <img [src]="product.image" [alt]="product.title" class="imgs" />
+    </div>
+
+    <h1
+      class="title-pro"
+      [attr.data-aos]="'fade-up'"
+      [attr.data-aos-delay]="i * 40 + 20"
+    >
+      {{ product.title }}
+    </h1>
+
+    <p
+      class="description"
+      [attr.data-aos]="'fade-up'"
+      [attr.data-aos-delay]="i * 40 + 40"
+    >
+      {{ product.description }}
+    </p>
+
+    <div class="bottom">
+      <div class="info">
+        <span
+          class="price"
+          [attr.data-aos]="'fade-right'"
+          [attr.data-aos-delay]="i * 40 + 60"
+        >
+          ${{ product.price }}
+        </span>
+
+        <span
+          class="brand"
+          [attr.data-aos]="'fade-left'"
+          [attr.data-aos-delay]="i * 40 + 60"
+        >
+          {{ product.brand }}
+        </span>
+      </div>
+    </div>
+  </div>
+</section>

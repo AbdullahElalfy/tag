@@ -1,0 +1,88 @@
+<p-toast></p-toast>
+<div class="container">
+  <section class="glass-form-section">
+    <h1 class="glass-form-title">Register Form</h1>
+    <form [formGroup]="signUpForm" class="glass-form" (ngSubmit)="sumbit()">
+      <!-- Username -->
+      <div class="field">
+        <label for="username">Username:</label>
+        <input
+          type="text"
+          placeholder="Type Your Username"
+          id="username"
+          formControlName="name"
+          class="glass-input"
+        />
+        <div class="validtions">
+          @if(name.errors?.['required'] && name.touched){
+          <p class="error-msg">This field Is Required</p>
+          }
+        </div>
+      </div>
+      <!-- Email -->
+      <div class="field">
+        <label for="email">Email:</label>
+        <input
+          type="text"
+          placeholder="Type Your Email"
+          id="email"
+          formControlName="email"
+          class="glass-input"
+        />
+        <div class="validtions">
+          @if(email.errors?.['required'] && email.touched){
+          <p class="error-msg">This field Is Required</p>
+          } @if(email.errors?.['email'] &&email.touched){
+          <p class="error-msg">Enter Vaild Email</p>
+          }
+        </div>
+      </div>
+      <!-- Password -->
+      <div class="field">
+        <label for="password">Password:</label>
+        <input
+          type="text"
+          placeholder="Type Your Password"
+          id="password"
+          class="glass-input"
+          formControlName="password"
+        />
+        <div class="validtions">
+          @if(password.errors?.['required'] && password.touched){
+          <p class="error-msg">This field Is Required</p>
+          } @if(password.errors?.['minlength'] &&password.touched){
+          <p class="error-msg">Password must be at least 6 characters</p>
+          }
+        </div>
+      </div>
+      <!-- Re-Password -->
+      <div class="field">
+        <label for="repass">Repassword:</label>
+        <input
+          type="text"
+          placeholder="Type Your password Again"
+          id="repass"
+          class="glass-input"
+          formControlName="rePassword"
+        />
+        <div class="validations">
+          @if (signUpForm.hasError('passwordMismatch') && rePassword.touched) {
+          <p class="error-msg">Passwords do not match</p>
+          }
+        </div>
+      </div>
+      <button class="glass-btn">Sign Up</button>
+    </form>
+  </section>
+
+  <ngx-spinner
+    bdColor="rgba(0, 0, 0, 0.9)"
+    size="medium"
+    color="#2563eb"
+    type="ball-scale-multiple"
+    [fullScreen]="true"
+  >
+    >
+    <p style="color: white">Getting things ready...</p></ngx-spinner
+  >
+</div>

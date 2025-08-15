@@ -1,0 +1,24 @@
+<section class="product-details">
+  <div class="image-container">
+    <img [src]="productDetails.image" [alt]="productDetails.title" />
+  </div>
+
+  <div class="info">
+    <h2 class="title-detail">{{ productDetails.title }}</h2>
+    <p class="brand">
+      Brand: <span>{{ productDetails.brand }}</span>
+    </p>
+    <p class="category">
+      Category: <span>{{ productDetails.category }}</span>
+    </p>
+    <p class="sizes" *ngIf="productDetails.sizes?.length">
+      Sizes: <span *ngFor="let size of productDetails.sizes">{{ size }} </span>
+    </p>
+    <p class="price">{{ productDetails.price | currency }}</p>
+    <p class="description">{{ productDetails.description }}</p>
+
+    <button class="add-to-cart" (click)="addToCart(productDetails)">
+      🛒 Add to Cart
+    </button>
+  </div>
+</section>

@@ -1,0 +1,147 @@
+/* Main Section */
+section {
+  position: relative;
+  padding: 80px 20px;
+  background-color: #111111;
+  overflow: hidden;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Services Grid */
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 24px;
+  max-width: 1000px;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+/* Service Box - Clean & Professional */
+.service-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 16px;
+  padding: 32px 24px;
+  text-align: center;
+  position: relative;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+
+.service-box:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
+}
+
+/* Icon Styling - Clean & Simple */
+.service-box i {
+  font-size: 2.8em;
+  color: #c1beae;
+  margin-bottom: 20px;
+  display: block;
+  transition: all 0.3s ease;
+  opacity: 0.9;
+}
+
+.service-box:hover i {
+  transform: scale(1.05);
+  color: #fff;
+  opacity: 1;
+}
+
+/* Title Styling */
+.service-box h3 {
+  font-size: 1.3em;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 12px;
+  transition: all 0.3s ease;
+}
+
+.service-box:hover h3 {
+  color: #fff;
+}
+
+/* Description Styling */
+.service-box p {
+  font-size: 0.95em;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.5;
+  font-weight: 300;
+  transition: all 0.3s ease;
+}
+
+.service-box:hover p {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .services {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 800px;
+  }
+
+  .service-box {
+    padding: 28px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 60px 15px;
+    margin: 5px 40px;
+  }
+
+  .services {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    max-width: 400px;
+  }
+
+  .title {
+    margin-bottom: 40px;
+  }
+  .pro {
+    font-size: 44px;
+  }
+  .service-box {
+    padding: 24px 18px;
+  }
+
+  .service-box i {
+    font-size: 2.4em;
+    margin-bottom: 16px;
+  }
+
+  .service-box h3 {
+    font-size: 1.2em;
+  }
+
+  .service-box p {
+    font-size: 0.9em;
+  }
+}
+
+/* Loading animation for AOS */
+[data-aos="fade-down"] {
+  opacity: 0;
+  transform: translateY(-30px);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+[data-aos="fade-down"].aos-animate {
+  opacity: 1;
+  transform: translateY(0);
+}

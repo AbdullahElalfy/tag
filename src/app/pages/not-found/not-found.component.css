@@ -1,0 +1,26 @@
+.not-found-container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle, #1a1a1a, #000000);
+}
+
+.not-found-card {
+  text-align: center;
+  padding: 2rem;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  color: white;
+}
+
+.icon-container {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  color: #ff6b6b;
+}
+
+.not-found-icon {
+  font-size: 5rem;
+}

@@ -1,0 +1,240 @@
+/* Main container for category section */
+.cate {
+  background-color: #1a1a1a;
+  height: 90vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  overflow: hidden;
+}
+
+/* Background texture with animation */
+.texture {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(
+      circle at 20% 80%,
+      rgba(193, 190, 174, 0.08) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(42, 41, 41, 0.15) 0%,
+      transparent 50%
+    );
+  z-index: 1;
+  animation: textureShift 20s ease-in-out infinite;
+}
+
+/* Animation for shifting background texture */
+@keyframes textureShift {
+  0%,
+  100% {
+    transform: translateX(0) translateY(0);
+  }
+  50% {
+    transform: translateX(8px) translateY(-4px);
+  }
+}
+
+/* Container for category boxes */
+.cate-boxes {
+  display: flex;
+  gap: 2rem;
+  z-index: 3;
+  position: relative;
+  perspective: 1000px;
+}
+
+/* Category box styling */
+.box {
+  width: 280px;
+  height: 360px;
+  background: linear-gradient(
+    135deg,
+    rgba(193, 190, 174, 0.12) 0%,
+    rgba(42, 41, 41, 0.08) 100%
+  );
+  border: 1px solid rgba(193, 190, 174, 0.2);
+  border-radius: 16px;
+  padding: 1.5rem;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transform-style: preserve-3d;
+  overflow: hidden;
+  backdrop-filter: blur(8px);
+  -webkit-transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  -moz-transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  -ms-transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  -o-transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* Inner glow effect inside the box */
+.box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    45deg,
+    rgba(193, 190, 174, 0.05) 0%,
+    transparent 50%,
+    rgba(42, 41, 41, 0.05) 100%
+  );
+  border-radius: 16px;
+  z-index: 1;
+}
+
+/* Hover effects for the box */
+.box:hover {
+  transform: translateY(-8px) rotateX(5deg) rotateY(5deg);
+  background: linear-gradient(
+    135deg,
+    rgba(193, 190, 174, 0.18) 0%,
+    rgba(42, 41, 41, 0.12) 100%
+  );
+  border-color: rgba(193, 190, 174, 0.35);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 0 20px rgba(193, 190, 174, 0.1);
+}
+
+/* Styling for box images */
+.box img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  position: relative;
+  z-index: 2;
+  transition: all 0.4s ease;
+  filter: sepia(20%) contrast(1.1) brightness(0.95);
+}
+
+/* Hover effects for box images */
+.box:hover img {
+  transform: scale(1.05);
+  filter: sepia(30%) contrast(1.2) brightness(1.05);
+  box-shadow: 0 8px 24px rgba(193, 190, 174, 0.15);
+}
+
+/* Title inside the box */
+.box h1 {
+  font-family: "extend", sans-serif;
+  color: #c1beae;
+  font-size: 24px;
+  font-weight: 600;
+  margin: 1.2rem 0 0.8rem 0;
+  position: relative;
+  z-index: 2;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+/* Hover effects for the title */
+.box:hover h1 {
+  color: rgba(193, 190, 174, 0.9);
+  transform: translateY(-2px);
+  text-shadow: 0 2px 8px rgba(42, 41, 41, 0.3);
+}
+
+/* Description text inside the box */
+.box p {
+  color: rgba(193, 190, 174, 0.8);
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+  position: relative;
+  z-index: 2;
+  transition: all 0.3s ease;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Hover effects for description text */
+.box:hover p {
+  color: rgba(193, 190, 174, 0.95);
+  transform: translateY(-1px);
+  -webkit-transform: translateY(-1px);
+  -moz-transform: translateY(-1px);
+  -ms-transform: translateY(-1px);
+  -o-transform: translateY(-1px);
+}
+
+/* Animation delay for staggered hover effects */
+.box:nth-child(1) {
+  animation-delay: 0s;
+}
+.box:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.box:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+/* Glow border effect when hovering */
+.box::after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(
+    45deg,
+    rgba(193, 190, 174, 0.1),
+    transparent,
+    rgba(42, 41, 41, 0.1)
+  );
+  border-radius: 18px;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.box:hover::after {
+  opacity: 1;
+}
+
+/* Responsive styling for mobile devices */
+@media (max-width: 768px) {
+  .cate {
+    height: fit-content;
+  }
+
+  .cate-boxes {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .box {
+    width: 300px;
+    height: 300px;
+    flex-direction: row;
+    align-items: center;
+    padding: 1.5rem;
+  }
+
+  .box img {
+    width: 100%;
+    height: 124px;
+    object-fit: cover;
+    object-position: 20% 22%;
+  }
+
+  .box-content {
+    flex: 1;
+  }
+
+  .box:hover {
+    transform: translateY(-4px);
+  }
+}

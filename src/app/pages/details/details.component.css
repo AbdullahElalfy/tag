@@ -1,0 +1,168 @@
+/* Main section layout */
+section {
+  min-height: 75vh;
+  margin-top: 100px;
+  padding: 0 20px;
+}
+
+/* Product details container */
+.product-details {
+  display: flex;
+  gap: 3rem;
+  padding: 2.5rem;
+  border-radius: 25px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  margin: 100px 30px 30px;
+}
+
+/* Product image container */
+.image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  padding: 0;
+  border: none;
+}
+
+/* Product image styling */
+.image-container img {
+  max-width: 100%;
+  max-height: 450px;
+  border-radius: 15px;
+  object-fit: cover;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: none;
+  border: none;
+}
+
+/* Image hover effect */
+.image-container img:hover {
+  transform: scale(1.08);
+}
+
+/* Product info container */
+.info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 10px;
+}
+
+/* Product title */
+.title-detail {
+  font-size: 2.5rem;
+  font-family: "Montserrat", sans-serif;
+  color: #f5f5f5;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+  font-weight: 800;
+  text-wrap-mode: nowrap;
+}
+
+/* Brand, category, and sizes text */
+.brand,
+.category,
+.sizes {
+  font-size: 1.1rem;
+  color: #ffffff;
+  font-family: "extend";
+}
+
+/* Span inside brand, category, and sizes */
+.brand span,
+.category span,
+.sizes span {
+  color: #c1beae;
+  font-family: "extend";
+  font-size: 1.2rem;
+  margin-left: 8px;
+}
+
+/* Price styling */
+.price {
+  font-size: 2rem;
+  font-family: "extend";
+  color: #c1beae;
+  padding: 12px 20px;
+  border-radius: 15px;
+  display: inline-block;
+  border: 1px solid rgba(193, 190, 174, 0.2);
+  transition: all 0.3s ease;
+}
+
+/* Price hover effect */
+.price:hover {
+  transform: scale(1.02);
+}
+
+/* Product description */
+.description {
+  line-height: 1.7;
+  color: #ffffff;
+  font-size: 1.1rem;
+  padding: 20px;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Add to cart button */
+.add-to-cart {
+  color: #1a1a1a;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  font-family: "extend";
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 6px 20px rgba(193, 190, 174, 0.3);
+  align-self: flex-start;
+}
+
+/* Add to cart hover effect */
+.add-to-cart:hover {
+  color: #1a1a1a;
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2);
+}
+
+/* Add to cart active state */
+.add-to-cart:active {
+  transform: translateY(-1px) scale(1.02);
+}
+
+/* Animation for product details entrance */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 768px) {
+  .product-details {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1.5rem;
+  }
+
+  .title-detail {
+    font-size: 2rem;
+    text-wrap-mode: wrap;
+  }
+
+  .price {
+    font-size: 1.7rem;
+  }
+}

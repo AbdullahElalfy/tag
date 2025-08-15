@@ -1,0 +1,69 @@
+<section>
+  <div class="title" data-aos="fade-down" data-aos-duration="800">
+    <h2>Build The Fit</h2>
+    <p>Mix your gear — make it clear</p>
+  </div>
+
+  <div
+    class="glass-arrows"
+    data-aos="fade-up"
+    data-aos-delay="200"
+    data-aos-duration="800"
+  >
+    <button class="glass-arrow left" (click)="prev()">&#8592;</button>
+    <button class="glass-arrow right" (click)="next()">&#8594;</button>
+  </div>
+
+  <div
+    class="outfit-image"
+    data-aos="zoom-in"
+    data-aos-delay="400"
+    data-aos-duration="800"
+  >
+    <img
+      [src]="images[currentIndex]"
+      alt="Outfit current"
+      class="outfit current"
+      [class.exit-right]="animateOut && direction === 'next'"
+      [class.exit-left]="animateOut && direction === 'prev'"
+    />
+    <img
+      *ngIf="animateIn"
+      [src]="images[incomingIndex]"
+      alt="Outfit incoming"
+      class="outfit incoming"
+      [class.enter-left]="animateIn && direction === 'next'"
+      [class.enter-right]="animateIn && direction === 'prev'"
+    />
+
+    <!-- dots ... -->
+    <div
+      class="dots"
+      data-aos="fade-up"
+      data-aos-delay="600"
+      data-aos-duration="800"
+    >
+      <div class="glass-dot">
+        <div class="dot-inner"></div>
+        <div class="info-box">
+          <h4>Jeans</h4>
+          <p>$39.99</p>
+        </div>
+      </div>
+      <div class="glass-dot">
+        <div class="dot-inner"></div>
+        <div class="info-box">
+          <h4>T-Shirt</h4>
+          <p>$59.99</p>
+        </div>
+      </div>
+      <div class="glass-dot">
+        <div class="dot-inner"></div>
+        <div class="info-box">
+          <h4>Sneakers</h4>
+          <p>$89.99</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

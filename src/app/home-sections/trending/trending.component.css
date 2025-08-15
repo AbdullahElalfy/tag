@@ -1,0 +1,148 @@
+/* Main section background and height */
+section {
+  background-color: #111111;
+  height: 80vh;
+}
+
+/* Container for the trending products inside the section */
+.trend-products {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 60px;
+}
+
+/* Product card container */
+.product-card {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 20px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  max-width: 280px;
+  margin: auto;
+  overflow: hidden;
+  width: 280px;
+  height: 370px;
+}
+
+/* Shine effect layer on product card */
+.product-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.05),
+    transparent
+  );
+  transition: left 0.6s ease;
+}
+
+/* Shine animation on hover */
+.product-card:hover::before {
+  left: 100%;
+}
+
+/* Product card hover scaling & shadow */
+.product-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Product image container */
+.product-img img {
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+  width: 200px;
+}
+
+/* Zoom image on card hover */
+.product-card:hover .product-img img {
+  transform: scale(1.05);
+}
+
+/* Product title styling */
+.product-info h3 {
+  color: #fff;
+  font-size: 1.1rem;
+  margin: 15px 0 5px;
+}
+
+/* Product price styling */
+.product-info p {
+  color: #c1beae;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/* Product button styling */
+.product-info button {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  backdrop-filter: blur(5px);
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+/* Product button hover effects */
+.product-info button:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: scale(1.05);
+}
+
+/* Different width utility class */
+.diff-width {
+  width: 150px !important;
+}
+
+/* Responsive styles for section & products */
+@media (max-width: 768px) {
+  section {
+    height: auto;
+    padding: 20px 0;
+  }
+
+  .trend-products {
+    flex-direction: column;
+    align-items: center;
+    margin: 0 20px;
+    gap: 20px;
+  }
+
+  .product-card {
+    max-width: 90%;
+    width: 100%;
+    height: auto;
+    padding: 15px;
+  }
+
+  .product-img img {
+    width: 150px;
+  }
+
+  .product-info h3 {
+    font-size: 1rem;
+  }
+
+  .product-info p {
+    font-size: 0.9rem;
+  }
+
+  .product-info button {
+    padding: 8px 16px;
+    font-size: 0.85rem;
+  }
+}
