@@ -1,0 +1,144 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "Monochrome Oversized Graphic Tee",
+      "image": "assets/products-imgs/product-page-imgs/t-1.png",
+      "price": 240,
+      "description": "Black oversized tee with a high-contrast monochrome graphic for a bold street look.",
+      "brand": "Supreme",
+      "sizes": ["M", "L", "XL"],
+      "category": "oversized"
+    },
+    {
+      "id": 2,
+      "title": "Minimal Contrast Graphic Tee",
+      "image": "assets/products-imgs/product-page-imgs/t-2.png",
+      "price": 230,
+      "description": "Black oversized tee with a high-contrast monochrome graphic for a bold street look.",
+      "brand": "Uniqlo",
+      "sizes": ["S", "M", "L", "XL"],
+      "category": "t-shirt"
+    },
+    {
+      "id": 3,
+      "title": "Bold Statement Oversized Tee",
+      "image": "assets/products-imgs/product-page-imgs/t-3.png",
+      "price": 250,
+      "description": "Black oversized tee with a high-contrast monochrome graphic for a bold street look.",
+      "brand": "Adidas",
+      "sizes": ["M", "L", "XL"],
+      "category": "oversized"
+    },
+    {
+      "id": 4,
+      "title": "Accent Color Graphic Tee",
+      "image": "assets/products-imgs/product-page-imgs/t-4.png",
+      "price": 260,
+      "description": "Black oversized tee with a high-contrast monochrome graphic for a bold street look.",
+      "brand": "Nike",
+      "sizes": ["M", "L", "XL"],
+      "category": "t-shirt"
+    },
+    {
+      "id": 5,
+      "title": "Subtle Logo Chest Tee",
+      "image": "assets/products-imgs/product-page-imgs/t-5.png",
+      "price": 220,
+      "description": "Black oversized tee with a high-contrast monochrome graphic for a bold street look.",
+      "brand": "Zara",
+      "sizes": ["S", "M", "L"],
+      "category": "t-shirt"
+    },
+    {
+      "id": 6,
+      "title": "Arabic Callout Print Tee",
+      "image": "assets/products-imgs/product-page-imgs/t-6.png",
+      "price": 245,
+      "description": "Black oversized tee with a high-contrast monochrome graphic for a bold street look.",
+      "brand": "Stussy",
+      "sizes": ["M", "L", "XL"],
+      "category": "t-shirt"
+    },
+    {
+      "id": 7,
+      "title": "Central Graphic Street Tee",
+      "image": "assets/products-imgs/product-page-imgs/t-7.png",
+      "price": 255,
+      "description": "Black oversized tee with a high-contrast monochrome graphic for a bold street look.",
+      "brand": "Off-White",
+      "sizes": ["M", "L", "XL"],
+      "category": "oversized"
+    },
+    {
+      "id": 8,
+      "title": "Abstract Print Tee",
+      "image": "assets/products-imgs/product-page-imgs/t-8.png",
+      "price": 235,
+      "description": "Black oversized tee with a high-contrast monochrome graphic for a bold street look.",
+      "brand": "Acne Studios",
+      "sizes": ["S", "M", "L"],
+      "category": "t-shirt"
+    },
+    {
+      "id": 9,
+      "title": "Portrait Statement Tee",
+      "image": "assets/products-imgs/product-page-imgs/t-9.png",
+      "price": 270,
+      "description": "Black oversized tee with a high-contrast monochrome graphic for a bold street look.",
+      "brand": "Fear of God",
+      "sizes": ["M", "L", "XL"],
+      "category": "oversized"
+    },
+    {
+      "id": 10,
+      "title": "White Logo Print Tee",
+      "image": "assets/products-imgs/product-page-imgs/t-10.png",
+      "price": 210,
+      "description": "Black oversized tee with a high-contrast monochrome graphic for a bold street look.",
+      "brand": "H&M",
+      "sizes": ["S", "M", "L", "XL"],
+      "category": "t-shirt"
+    },
+    {
+      "id": 11,
+      "title": "Dark Portrait Tee",
+      "image": "assets/products-imgs/product-page-imgs/t-11.png",
+      "price": 265,
+      "description": "Black oversized tee with a high-contrast monochrome graphic for a bold street look.",
+      "brand": "A.P.C.",
+      "sizes": ["M", "L", "XL"],
+      "category": "t-shirt"
+    },
+    {
+      "id": 12,
+      "title": "Distorted Art Tee",
+      "image": "assets/products-imgs/product-page-imgs/t-12.png",
+      "price": 225,
+      "description": "Black oversized tee with a high-contrast monochrome graphic for a bold street look.",
+      "brand": "Palace",
+      "sizes": ["M", "L", "XL"],
+      "category": "t-shirt"
+    },
+    {
+      "id": 13,
+      "title": "Colorwash Graphic Tee",
+      "image": "assets/products-imgs/product-page-imgs/t-13.png",
+      "price": 275,
+      "description": "Black oversized tee with a high-contrast monochrome graphic for a bold street look.",
+      "brand": "Carhartt WIP",
+      "sizes": ["M", "L", "XL"],
+      "category": "oversized"
+    },
+    {
+      "id": 14,
+      "title": "Classic Portrait Tee",
+      "image": "assets/products-imgs/product-page-imgs/t-14.png",
+      "price": 290,
+      "description": "Black oversized tee with a high-contrast monochrome graphic for a bold street look.",
+      "brand": "Balenciaga",
+      "sizes": ["M", "L", "XL"],
+      "category": "oversized"
+    }
+  ]
+}
