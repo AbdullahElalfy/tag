@@ -1,39 +1,8 @@
 import { Routes } from '@angular/router';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 
-import { authGuradGuard } from './core/gurads/auth-gurad.guard';
-
 export const routes: Routes = [
-  { path: '', redirectTo: 'auth', pathMatch: 'full' },
-  {
-    path: 'auth',
-    loadComponent: () =>
-      import('./layouts/auth-layout/auth-layout/auth-layout.component').then(
-        (c) => c.AuthLayoutComponent
-      ),
-    title: 'Sign Up',
-    children: [
-      {
-        path: 'login',
-        loadComponent: () =>
-          import('./pages/login/login.component').then((c) => c.LoginComponent),
-        title: 'Log In',
-      },
-      {
-        path: 'signup',
-        loadComponent: () =>
-          import('./pages/sign-up/sign-up.component').then(
-            (c) => c.SignUpComponent
-          ),
-        title: 'Sign Up',
-      },
-      {
-        path: '',
-        redirectTo: 'signup',
-        pathMatch: 'full',
-      },
-    ],
-  },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
 
   {
     path: '',
@@ -42,7 +11,6 @@ export const routes: Routes = [
         (c) => c.UserLayoutComponent
       ),
     title: 'user',
-    canActivate: [authGuradGuard],
     children: [
       {
         path: '',
