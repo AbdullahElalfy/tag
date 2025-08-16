@@ -228,5 +228,6 @@ section {
   }
   .cart-item {
     padding: 10px;
+    margin-top: 128px;
   }
 }
